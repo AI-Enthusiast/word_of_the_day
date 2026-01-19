@@ -5,7 +5,7 @@
 #1 DONE 0.0s
 
 #2 [internal] load metadata for docker.io/library/python:3.12.9
-#2 DONE 2.0s
+#2 DONE 1.1s
 
 #3 [internal] load .dockerignore
 #3 transferring context: 2B done
@@ -15,8 +15,8 @@
 #4 DONE 0.0s
 
 #5 [internal] load build context
-#5 transferring context: 60.62kB 0.1s done
-#5 DONE 0.1s
+#5 transferring context: 152.41kB 0.2s done
+#5 DONE 0.2s
 
 #6 [2/5] WORKDIR /word_of_the_day
 #6 CACHED
@@ -28,16 +28,14 @@
 #8 CACHED
 
 #9 [5/5] COPY . .
-#9 DONE 0.3s
+#9 DONE 0.6s
 
 #10 exporting to image
 #10 exporting layers
-#10 exporting layers 0.2s done
-#10 writing image sha256:883a08e541da56864a235c0f1c08aa93cd8145e01bbcbfef5b4aa7d59ed1789a
-#10 writing image sha256:883a08e541da56864a235c0f1c08aa93cd8145e01bbcbfef5b4aa7d59ed1789a 0.3s done
-#10 naming to docker.io/library/word_of_the_day
+#10 exporting layers 0.4s done
+#10 writing image sha256:7e1c9a4d489f78a01d9fb8fb74ed0d319df3f2158d6892983d2bfa4a0adde79a done
 #10 naming to docker.io/library/word_of_the_day done
-#10 DONE 0.5s
+#10 DONE 0.4s
 Traceback (most recent call last):
   File "/word_of_the_day/src/scraper.py", line 48, in <module>
     print(get_word_of_the_day(soup))
