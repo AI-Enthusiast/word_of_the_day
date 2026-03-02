@@ -1,0 +1,48 @@
+#0 building with "default" instance using docker driver
+
+#1 [internal] load build definition from Dockerfile
+#1 transferring dockerfile: 403B done
+#1 DONE 0.0s
+
+#2 [internal] load metadata for docker.io/library/python:3.12.9
+#2 DONE 1.2s
+
+#3 [internal] load .dockerignore
+#3 transferring context: 2B done
+#3 DONE 0.0s
+
+#4 [1/5] FROM docker.io/library/python:3.12.9@sha256:4ece045a9078331fad2da10fe3313fff96cecc429365def92c540cc17d9b1579
+#4 DONE 0.0s
+
+#5 [internal] load build context
+#5 transferring context: 181.70kB 0.2s done
+#5 DONE 0.2s
+
+#6 [2/5] WORKDIR /word_of_the_day
+#6 CACHED
+
+#7 [3/5] COPY requirements.txt .
+#7 CACHED
+
+#8 [4/5] RUN pip install -r requirements.txt
+#8 CACHED
+
+#9 [5/5] COPY . .
+#9 DONE 0.7s
+
+#10 exporting to image
+#10 exporting layers
+#10 exporting layers 0.4s done
+#10 writing image sha256:cc83541849dc1836eeae16aafdd9fc0bad5bc6a60186fea522380091c9a76aa0
+#10 writing image sha256:cc83541849dc1836eeae16aafdd9fc0bad5bc6a60186fea522380091c9a76aa0 0.4s done
+#10 naming to docker.io/library/word_of_the_day
+#10 naming to docker.io/library/word_of_the_day done
+#10 DONE 0.8s
+Traceback (most recent call last):
+  File "/word_of_the_day/src/scraper.py", line 48, in <module>
+    print(get_word_of_the_day(soup))
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/word_of_the_day/src/scraper.py", line 12, in get_word_of_the_day
+    word = soup.find('h1', class_="js-fit-text").text
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'text'
